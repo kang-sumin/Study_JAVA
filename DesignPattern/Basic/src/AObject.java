@@ -4,6 +4,7 @@ public class AObject {
 
     public void funcAA(){
 
+        //Delegate,위임하다
         /*많은 기능을 구현해야할때 다른 사람한테 A,B 기능 구현을 맡기고
         또 다른 사람이 C,D 기능을 구현하게 되었을때,
         그 코드들을 복사 붙여넣기로 넣지 않고, interface로 구현하여
