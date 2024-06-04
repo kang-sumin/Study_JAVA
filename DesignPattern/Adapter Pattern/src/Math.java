@@ -11,4 +11,9 @@ public class Math {
         return num/2;
     }
 
+    //강화된 두배를 구하는 함수 알고리즘 (새롭게 추가됨/같지만 바뀌었다고 가정함)
+    public static Double doubled(Double d){
+        return d*2;
+    }
+
 }
