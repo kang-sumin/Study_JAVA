@@ -21,10 +21,24 @@ public class Main {
     * <<input>>
     * String[] args : 매개변수 자리
     * String[] : input 타입
+    * args : 변수명
     * */
 
     public static void main(String[] args) {
 
-        System.out.println("Our First Porject! :)");
+        // 객체 : 모든것-> 특징(속성, 변수), 행동(메소드)
+        /* print -> 줄 바꿈을 하지 X
+        *  println -> 줄 바꿈 O
+        *  ln : line
+        *  */
+        System.out.print("Our First Porject! :) ");
+        System.out.println("Project :)");
+
+        System.out.println(7);
+        System.out.println(3);
+        System.out.println(3.14);
+        System.out.println("JAVA");
+
+
     }
 }
