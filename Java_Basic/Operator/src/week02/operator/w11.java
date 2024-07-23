@@ -1,4 +1,4 @@
-package week02;
+package week02.operator;
 
 public class w11 {
     //조건문

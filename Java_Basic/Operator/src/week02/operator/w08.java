@@ -1,4 +1,4 @@
-package week02;
+package week02.operator;
 
 public class w08 {
     //연산자 우선순위 : 산술>비교>논리>대입

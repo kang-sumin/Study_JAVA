@@ -1,4 +1,4 @@
-package week02;
+package week02.operator;
 
 public class w15 {
     //반복문 for문

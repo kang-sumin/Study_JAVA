@@ -1,4 +1,4 @@
-package week02;
+package week02.operator;
 
 public class w12 {
     //중첩 if 문

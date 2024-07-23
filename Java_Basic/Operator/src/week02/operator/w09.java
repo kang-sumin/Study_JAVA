@@ -1,4 +1,4 @@
-package week02;
+package week02.operator;
 
 public class w09 {
     public static void main(String[] args) {

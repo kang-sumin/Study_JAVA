@@ -1,4 +1,4 @@
-package week02;
+package week02.operator;
 
 public class w14 {
     //switch case 문

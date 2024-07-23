@@ -1,5 +1,5 @@
 // 조건문으로 가위바위보 만들기
-package week02;
+package week02.operator;
 import java.util.Objects;
 import java.util.Scanner;
 

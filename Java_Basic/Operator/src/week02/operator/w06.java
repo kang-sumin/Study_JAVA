@@ -1,4 +1,4 @@
-package week02;
+package week02.operator;
 
 public class w06 {
     //대입연산자에서 주의해야 할 점
