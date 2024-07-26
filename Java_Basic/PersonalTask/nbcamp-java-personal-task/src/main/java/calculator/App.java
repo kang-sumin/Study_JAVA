@@ -7,6 +7,8 @@ public class App {
 
         Scanner sc = new Scanner(System.in); //Scanner 객체 생성
         String exit = "";
+        int[] results = new int[10];
+        int count =0;
 
         do{
             int result = 0; //사칙연산 결과값
@@ -48,10 +50,18 @@ public class App {
             //연산 결과 출력
             System.out.println("결과 : " + result);
 
+            //연산 결과값 배열에 저장
+            results[count]=result;
+            count++;
+
+            System.out.println(Arrays.toString(results));
+
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
             exit = sc.nextLine();
 
+
         }while(!exit.equals("exit"));
+
 
     }
 }
