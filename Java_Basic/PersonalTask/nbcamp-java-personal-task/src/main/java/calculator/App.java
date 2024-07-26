@@ -9,6 +9,7 @@ public class App {
         LinkedList<Integer> results = new LinkedList<>();
         String exit = "";
         String remove ="";
+        String inquiry ="";
 
         while(!exit.equals("exit")){
             int result = 0; //사칙연산 결과값
@@ -59,7 +60,14 @@ public class App {
                 results.removeFirst();
                 System.out.println("삭제되었습니다.");
             }
-            System.out.println(results);
+
+            System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
+            inquiry=sc.next();
+            if(inquiry.equals("inquiry")){
+                System.out.print("[ ");
+                results.forEach(resultData -> System.out.print("\""+resultData+"\" "));
+                System.out.print("]");
+            }
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
             exit = sc.next();
