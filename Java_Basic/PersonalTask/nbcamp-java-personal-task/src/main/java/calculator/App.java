@@ -8,7 +8,7 @@ public class App {
         Scanner sc = new Scanner(System.in); //Scanner 객체 생성
         String exit = "";
         int[] results = new int[10];
-        int count =0;
+        int index =0;
 
         do{
             int result = 0; //사칙연산 결과값
@@ -51,8 +51,15 @@ public class App {
             System.out.println("결과 : " + result);
 
             //연산 결과값 배열에 저장
-            results[count]=result;
-            count++;
+            if(index==9){
+                for(int i=0;i<results.length-1;i++){
+                    results[i]=results[i+1];
+                }
+                results[index]=result;
+            }else{
+                results[index]=result;
+                index++;
+            }
 
             System.out.println(Arrays.toString(results));
 
