@@ -6,11 +6,11 @@ public class App {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in); //Scanner 객체 생성
+        LinkedList<Integer> results = new LinkedList<>();
         String exit = "";
-        int[] results = new int[10];
-        int index =0;
+        String remove ="";
 
-        do{
+        while(!exit.equals("exit")){
             int result = 0; //사칙연산 결과값
 
             //양의 정수 2개 입력
@@ -51,23 +51,21 @@ public class App {
             System.out.println("결과 : " + result);
 
             //연산 결과값 배열에 저장
-            if(index==9){
-                for(int i=0;i<results.length-1;i++){
-                    results[i]=results[i+1];
-                }
-                results[index]=result;
-            }else{
-                results[index]=result;
-                index++;
-            }
+            results.add(result);
+            System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
+            remove=sc.next();
 
-            System.out.println(Arrays.toString(results));
+            if(remove.equals("remove")){
+                results.removeFirst();
+                System.out.println("삭제되었습니다.");
+            }
+            System.out.println(results);
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
-            exit = sc.nextLine();
+            exit = sc.next();
 
 
-        }while(!exit.equals("exit"));
+        }
 
 
     }
