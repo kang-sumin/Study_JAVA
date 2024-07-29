@@ -3,10 +3,14 @@ package calculator;
 import java.util.*;
 
 public class Calculator {
-    LinkedList<Integer> results = new LinkedList<>();
+    LinkedList<Integer> results;
     int firstNum =0;
     int secondNum =0;
     char operator = 'A';
+
+    public Calculator(LinkedList<Integer> results){
+        this.results = results;
+    }
 
     public LinkedList<Integer> calculate(int firstNum, int secondNum, char operator) throws DivisionException{
         this.firstNum=firstNum;
@@ -35,7 +39,9 @@ public class Calculator {
                 System.out.println("연산기호는 사칙연산만 입력가능합니다.");
                 break;
         }
-        results.add(result);
+        this.results.add(result);
+
+        System.out.println(results.toString()); //확인용 출력
 
         return results;
     }

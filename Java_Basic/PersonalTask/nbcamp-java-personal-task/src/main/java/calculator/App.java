@@ -10,10 +10,10 @@ public class App {
         String exit = "";
         String remove = "";
         String inquiry = "";
+        Calculator calc = new Calculator(results);
 
 
         while (!exit.equals("exit")) {
-            Calculator calc = new Calculator();
 
             int firstNum = -1;
             int secondNum = -1;
@@ -40,15 +40,14 @@ public class App {
             catch(DivisionException e){
                 System.out.println(e.getMessage());
             }finally {
-                System.out.println("나눗셈 예외 handling");
+                System.out.println("연산 완료");
             }
             //연산 클래스 함수 호출
 
-
-            //연산 결과 출력
-            System.out.print("[ ");
-            results.forEach(resultData -> System.out.print("\"" + resultData + "\" "));
-            System.out.print("]");
+            //확인용 출력
+            for(int data : results){
+                System.out.println(data);
+            }
 
             //연산 결과값 배열에 저장
             System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
