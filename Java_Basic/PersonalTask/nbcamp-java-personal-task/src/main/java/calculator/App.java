@@ -6,6 +6,7 @@ public class App {
     public static void main(String[] args) {
         LinkedList<Integer> results = new LinkedList<>();
         Calculator calc = new Calculator(results);
+
         String exit = "";
         String remove = "";
         String inquiry = "";
