@@ -3,31 +3,37 @@ package calculator;
 import java.util.*;
 
 public class Calculator {
-    private LinkedList<Integer> results;
+    private LinkedList<Double> results;
+    //private LinkedList<Double> cresults;
     int firstNum = 0;
     int secondNum = 0;
     char operator = 'A';
+    double radius =0;
+    double result = 0; //사칙연산 결과값
+
+    //원주율 3.14는 절대 변하지 않는 값(상수)이여서 static final 로 선언
+    static final double PI = 3.14;
 
     //생성자
-    public Calculator(LinkedList<Integer> results) {
+    public Calculator(LinkedList<Double> results) {
         this.results = results;
     }
 
-    //Getter
-    public LinkedList<Integer> getResults() {
+    //Getter : 사칙연산 컬렉션
+    public LinkedList<Double> getResults() {
         return this.results;
     }
 
-    //Setter
-    public void setResults(LinkedList<Integer> results) {
+    //Setter : 사칙연산 컬렉션
+    public void setResults(LinkedList<Double> results) {
         this.results = results;
     }
 
-    public LinkedList<Integer> calculate(int firstNum, int secondNum, char operator) throws DivisionException {
+    public LinkedList<Double> calculate(int firstNum, int secondNum, char operator) throws DivisionException {
         this.firstNum = firstNum;
         this.secondNum = secondNum;
         this.operator = operator;
-        int result = 0; //사칙연산 결과값
+
 
         switch (this.operator) {
             case '+':
@@ -57,15 +63,22 @@ public class Calculator {
         return results;
     }
 
+    public LinkedList<Double> calculateCircleArea(double radius){
+        this.radius=radius;
+        result = Math.pow(radius, 2) * PI;
+        this.results.add(result);
+        return results;
+    }
+
     //저장된 첫번째 데이터 삭제 메서드
-    public void removeResult(){
+    public void removeResult() {
         this.results.removeFirst();
     }
 
-    public void inquiryResults(){
+    public void inquiryResults() {
         System.out.print("[ ");
-        for(int data : this.results){
-            System.out.print("\""+data+"\" ");
+        for (double data : this.results) {
+            System.out.print("\"" + data + "\" ");
         }
         System.out.print("]\n");
     }
