@@ -4,13 +4,13 @@ import java.util.*;
 
 public class App {
     public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in); //Scanner 객체 생성
         LinkedList<Integer> results = new LinkedList<>();
+        Calculator calc = new Calculator(results);
         String exit = "";
         String remove = "";
         String inquiry = "";
-        Calculator calc = new Calculator(results);
+
+        Scanner sc = new Scanner(System.in); //Scanner 객체 생성
 
 
         while (!exit.equals("exit")) {
@@ -34,27 +34,25 @@ public class App {
             //next()은 Scanner 클래스 메소드로 문자열을 반환하기 때문에 charAt(idx)메소드를 이용해 문자타입으로 변환하여 0번째 문자를 반환
             char operator = sc.next().charAt(0);
 
-            try{
-                results=calc.calculate(firstNum,secondNum,operator);
-            }
-            catch(DivisionException e){
+            //연산 클래스 함수 호출
+            try {
+                calc.calculate(firstNum, secondNum, operator);
+            } catch (DivisionException e) {
                 System.out.println(e.getMessage());
-            }finally {
+            } finally {
                 System.out.println("연산 완료");
             }
-            //연산 클래스 함수 호출
 
-            //확인용 출력
-            for(int data : results){
-                System.out.println(data);
-            }
 
             //연산 결과값 배열에 저장
             System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
             remove = sc.next();
 
+
             if (remove.equals("remove")) {
+                results = calc.getResults();
                 results.removeFirst();
+                calc.setResults(results);
                 System.out.println("삭제되었습니다.");
             }
 
@@ -62,8 +60,10 @@ public class App {
             inquiry = sc.next();
             if (inquiry.equals("inquiry")) {
                 System.out.print("[ ");
-                results.forEach(resultData -> System.out.print("\"" + resultData + "\" "));
-                System.out.print("]");
+                for(int data : calc.getResults()){
+                    System.out.print(data+" ");
+                }
+                System.out.print("]\n");
             }
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");

@@ -3,19 +3,30 @@ package calculator;
 import java.util.*;
 
 public class Calculator {
-    LinkedList<Integer> results;
-    int firstNum =0;
-    int secondNum =0;
+    private LinkedList<Integer> results;
+    int firstNum = 0;
+    int secondNum = 0;
     char operator = 'A';
 
-    public Calculator(LinkedList<Integer> results){
+    //생성자
+    public Calculator(LinkedList<Integer> results) {
         this.results = results;
     }
 
-    public LinkedList<Integer> calculate(int firstNum, int secondNum, char operator) throws DivisionException{
-        this.firstNum=firstNum;
-        this.secondNum=secondNum;
-        this.operator=operator;
+    //Getter
+    public LinkedList<Integer> getResults() {
+        return this.results;
+    }
+
+    //Setter
+    public void setResults(LinkedList<Integer> results) {
+        this.results = results;
+    }
+
+    public LinkedList<Integer> calculate(int firstNum, int secondNum, char operator) throws DivisionException {
+        this.firstNum = firstNum;
+        this.secondNum = secondNum;
+        this.operator = operator;
         int result = 0; //사칙연산 결과값
 
         switch (this.operator) {
