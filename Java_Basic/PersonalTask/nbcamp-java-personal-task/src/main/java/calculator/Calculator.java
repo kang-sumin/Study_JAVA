@@ -57,4 +57,9 @@ public class Calculator {
         return results;
     }
 
+    //저장된 첫번째 데이터 삭제 메서드
+    public void removeResult(){
+        this.results.removeFirst();
+    }
+
 }

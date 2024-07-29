@@ -50,9 +50,7 @@ public class App {
 
 
             if (remove.equals("remove")) {
-                results = calc.getResults();
-                results.removeFirst();
-                calc.setResults(results);
+                calc.removeResult();
                 System.out.println("삭제되었습니다.");
             }
 
