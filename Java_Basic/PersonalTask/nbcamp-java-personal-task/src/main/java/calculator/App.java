@@ -57,11 +57,7 @@ public class App {
             System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
             inquiry = sc.next();
             if (inquiry.equals("inquiry")) {
-                System.out.print("[ ");
-                for(int data : calc.getResults()){
-                    System.out.print(data+" ");
-                }
-                System.out.print("]\n");
+                calc.inquiryResults();
             }
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");

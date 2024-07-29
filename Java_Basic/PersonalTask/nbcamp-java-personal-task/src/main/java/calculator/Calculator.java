@@ -62,4 +62,12 @@ public class Calculator {
         this.results.removeFirst();
     }
 
+    public void inquiryResults(){
+        System.out.print("[ ");
+        for(int data : this.results){
+            System.out.print("\""+data+"\" ");
+        }
+        System.out.print("]\n");
+    }
+
 }
