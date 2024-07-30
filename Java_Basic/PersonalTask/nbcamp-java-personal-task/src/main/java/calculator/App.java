@@ -5,7 +5,8 @@ import java.util.*;
 public class App {
     public static void main(String[] args) {
         LinkedList<Double> results = new LinkedList<>();
-        Calculator calc = new Calculator(results);
+        ArithmeticCalculator calc1 = new ArithmeticCalculator(results);
+        CircleCalculator calc2 = new CircleCalculator(results);
 
         String exit = "";
         Scanner sc = new Scanner(System.in); //Scanner 객체 생성
@@ -37,7 +38,7 @@ public class App {
 
                 //연산 클래스 함수 호출
                 try {
-                    calc.calculate(firstNum, secondNum, operator);
+                    calc1.calculate(firstNum, secondNum, operator);
                 } catch (DivisionException e) {
                     System.out.println(e.getMessage());
                 } finally {
@@ -47,7 +48,7 @@ public class App {
                 System.out.println("<<< 원 넓이 계산 >>>");
                 System.out.println("원의 반지름을 입력하세요: ");
                 double radius = sc.nextDouble();
-                calc.calculateCircleArea(radius);
+                calc2.calculateCircleArea(radius);
 
             } else {
                 System.out.println("잘못입력하셨습니다.");
@@ -60,14 +61,14 @@ public class App {
 
 
             if (remove.equals("remove")) {
-                calc.removeResult();
+                calc1.removeResult();
                 System.out.println("삭제되었습니다.");
             }
 
             System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
             String inquiry = sc.next();
             if (inquiry.equals("inquiry")) {
-                calc.inquiryResults();
+                calc1.inquiryResults();
             }
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
