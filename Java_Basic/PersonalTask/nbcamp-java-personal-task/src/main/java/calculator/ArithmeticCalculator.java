@@ -22,19 +22,23 @@ public class ArithmeticCalculator extends Calculator{
 
         switch (this.operator) {
             case '+':
-                result = firstNum + secondNum;
+                super.add = new AddOperator();
+                result = super.add.operate(firstNum,secondNum);
                 break;
             case '-':
-                result = firstNum - secondNum;
+                super.sub = new SubtractOperator();
+                result = super.sub.operate(firstNum,secondNum);
                 break;
             case '*':
-                result = firstNum * secondNum;
+                super.mul = new MultiplyOperator();
+                result = super.mul.operate(firstNum,secondNum);
                 break;
             case '/':
                 if (secondNum == 0) {
                     throw new DivisionException();
                 } else {
-                    result = firstNum / secondNum;
+                    super.div = new DivideOperator();
+                    result = super.div.operate(firstNum,secondNum);
                 }
                 break;
             default:
