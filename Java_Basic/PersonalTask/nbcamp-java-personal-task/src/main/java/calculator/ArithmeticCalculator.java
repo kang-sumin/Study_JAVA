@@ -41,6 +41,10 @@ public class ArithmeticCalculator extends Calculator{
                     result = super.div.operate(firstNum,secondNum);
                 }
                 break;
+            case '%':
+                super.mod = new ModOperator();
+                result=super.mod.operate(firstNum,secondNum);
+                break;
             default:
                 System.out.println("연산기호는 사칙연산만 입력가능합니다.");
                 break;

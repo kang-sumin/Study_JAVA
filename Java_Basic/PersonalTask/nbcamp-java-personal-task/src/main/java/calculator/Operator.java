@@ -1,7 +1,8 @@
 package calculator;
 
 public interface Operator {
-//    public int operate(int firstNum, int secondNum) {
-//
-//    }
+    int result=0;
+
+    public int operate(int firstNum, int secondNum);
+
 }

@@ -13,6 +13,7 @@ public class Calculator {
     SubtractOperator sub;
     MultiplyOperator mul;
     DivideOperator div;
+    ModOperator mod;
 
     //생성자
     public Calculator(LinkedList<Double> results) {
