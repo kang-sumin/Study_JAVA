@@ -3,8 +3,7 @@ package calculator;
 import java.util.LinkedList;
 
 public class ArithmeticCalculator extends Calculator{
-    private LinkedList<Double> results;
-    //private LinkedList<Double> cresults;
+
     int firstNum;
     int secondNum;
     char operator;
@@ -46,6 +45,6 @@ public class ArithmeticCalculator extends Calculator{
 
         System.out.println(super.getResults().toString()); //확인용 출력
 
-        return results;
+        return super.getResults();
     }
 }
