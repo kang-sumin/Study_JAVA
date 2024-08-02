@@ -1,4 +1,4 @@
-package adventure;
+package java.adventure;
 
 public class Main {
 
