@@ -1,4 +1,4 @@
-package java.adventure.equals;
+package javaPracticeClass.adventure.equals;
 
 
 import java.util.Objects;
