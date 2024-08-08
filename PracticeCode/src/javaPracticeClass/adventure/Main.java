@@ -41,7 +41,9 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello World!");
 
+        //모험가 객체 생성
         Adventurer adventurer = new Adventurer();
+
 
         System.out.println("현재 식량 : " + adventurer.getFood());
         adventurer.addFood(2);
