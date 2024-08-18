@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Adapter Pattern/Adapter Pattern.iml" filepath="$PROJECT_DIR$/Adapter Pattern/Adapter Pattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/Basic/Basic.iml" filepath="$PROJECT_DIR$/Basic/Basic.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/DesignPattern.iml" filepath="$PROJECT_DIR$/.idea/DesignPattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Singleton Pattern/Singleton Pattern.iml" filepath="$PROJECT_DIR$/Singleton Pattern/Singleton Pattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/Strategy Pattern/Strategy Pattern.iml" filepath="$PROJECT_DIR$/Strategy Pattern/Strategy Pattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/Template Method Pattern/Template Method Pattern.iml" filepath="$PROJECT_DIR$/Template Method Pattern/Template Method Pattern.iml" />
     </modules>
